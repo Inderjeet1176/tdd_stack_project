@@ -57,6 +57,16 @@ class TestMyStack(unittest.TestCase):
         
         self.assertTrue(stack.is_empty())
 
+    def test_stack_after_push_pop_operations(self):
+        stack = MyStack()
+        stack.push(10)
+        stack.push(20)
+        stack.pop()       
+        stack.push(30)      
+        self.assertEqual(stack.peek(), 30)       
+        self.assertEqual(stack.size(), 2)
+        
+
 
 
 
