@@ -65,6 +65,15 @@ class TestMyStack(unittest.TestCase):
         stack.push(30)      
         self.assertEqual(stack.peek(), 30)       
         self.assertEqual(stack.size(), 2)
+
+    def test_pop_and_push_same_element(self):
+        stack = MyStack()
+        stack.push(10)
+        popped_item = stack.pop()
+        self.assertEqual(popped_item, 10)
+        stack.push(10)
+        self.assertEqual(stack.peek(), 10)
+    
         
 
 
