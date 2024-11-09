@@ -82,6 +82,16 @@ class TestMyStack(unittest.TestCase):
         stack.pop()
         with self.assertRaises(IndexError):
             stack.pop()
+
+    def test_stack_order(self):
+        stack = MyStack()
+        stack.push(10)
+        stack.push(20)
+        stack.push(30)
+        self.assertEqual(stack.pop(), 30)  
+        self.assertEqual(stack.pop(), 20)
+        self.assertEqual(stack.pop(), 10)  
+        
     
     
         
