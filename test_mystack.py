@@ -34,6 +34,13 @@ class TestMyStack(unittest.TestCase):
         stack = MyStack()
 
         self.assertIsNone(stack.peek())  
+    def test_stack_size(self):
+        stack = MyStack()
+        self.assertEqual(stack.size(), 0)  
+        stack.push(10)
+        stack.push(20)
+        self.assertEqual(stack.size(), 2)  
+
 
 
 
