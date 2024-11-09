@@ -30,6 +30,10 @@ class TestMyStack(unittest.TestCase):
 
         with self.assertRaises(IndexError):  
             stack.pop()
-    
+    def test_peek_on_empty_stack(self):
+        stack = MyStack()
+
+        self.assertIsNone(stack.peek())  
+
 
 
