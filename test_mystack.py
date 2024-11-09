@@ -91,6 +91,18 @@ class TestMyStack(unittest.TestCase):
         self.assertEqual(stack.pop(), 30)  
         self.assertEqual(stack.pop(), 20)
         self.assertEqual(stack.pop(), 10)  
+
+    def test_stack_size_after_push_pop(self):
+        stack = MyStack()
+        stack.push(10)
+        self.assertEqual(stack.size(), 1)
+        stack.push(20)
+        self.assertEqual(stack.size(), 2)
+        stack.pop()
+        self.assertEqual(stack.size(), 1)
+        stack.push(30)
+        self.assertEqual(stack.size(), 2)
+    
         
     
     
