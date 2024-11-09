@@ -40,6 +40,23 @@ class TestMyStack(unittest.TestCase):
         stack.push(10)
         stack.push(20)
         self.assertEqual(stack.size(), 2)  
+    def test_push_and_pop_multiple_items(self):
+        stack = MyStack()
+        stack.push(10)
+        stack.push(20)
+        stack.push(30)
+        
+        popped_item = stack.pop()
+        self.assertEqual(popped_item, 30)
+       
+        popped_item = stack.pop()
+        self.assertEqual(popped_item, 20)
+        
+        popped_item = stack.pop()
+        self.assertEqual(popped_item, 10)
+        
+        self.assertTrue(stack.is_empty())
+
 
 
 
