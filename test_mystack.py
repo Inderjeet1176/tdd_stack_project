@@ -10,5 +10,14 @@ class TestMyStack(unittest.TestCase):
         stack.push(10)
         self.assertFalse(stack.is_empty())
         self.assertEqual(stack.peek(), 10)
+    def test_push_multiple_items(self):
+        stack = MyStack()
+        stack.push(10)
+        stack.push(20)
+        stack.push(30)
+
+        self.assertFalse(stack.is_empty()) 
+        self.assertEqual(stack.peek(), 30)  
+
 
 
