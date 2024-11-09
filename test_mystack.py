@@ -73,6 +73,16 @@ class TestMyStack(unittest.TestCase):
         self.assertEqual(popped_item, 10)
         stack.push(10)
         self.assertEqual(stack.peek(), 10)
+
+    def test_multiple_pops_from_stack(self):
+        stack = MyStack()
+        stack.push(10)
+        stack.push(20)
+        stack.pop()
+        stack.pop()
+        with self.assertRaises(IndexError):
+            stack.pop()
+    
     
         
 
